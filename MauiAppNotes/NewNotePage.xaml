@@ -3,26 +3,29 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="MauiAppNotes.NewNotePage">
 
-    <ScrollView>
-        <VerticalStackLayout
-            Spacing="25"
-            Padding="30,0"
-            VerticalOptions="Center">
-            
-            
-            
-            <Label Text="Name"></Label>
-            <Entry x:Name="TxtName" Keyboard="Text" BackgroundColor="Wheat"></Entry>
+   
+        <Grid  Margin="30,50,30,0" RowSpacing="20" BackgroundColor="Aquamarine">
+        <Grid.RowDefinitions >
+            <RowDefinition Height="20"/>
+            <RowDefinition Height="30"/>
+            <RowDefinition Height="20"/>
+            <RowDefinition Height="30"/>
+            <RowDefinition Height="20"/>
+            <RowDefinition Height="30"/>
+            <RowDefinition Height="50"/>
+        </Grid.RowDefinitions>
 
-            <Label Text="Crated by"></Label>
-            <Entry x:Name="TxtCreatedBy" Keyboard="Text" BackgroundColor="Wheat"></Entry>
+        <Label Grid.Row="0"  Text="Name"></Label>
+        <Entry Grid.Row="1"  x:Name="TxtName" Keyboard="Text" BackgroundColor="Wheat"></Entry>
 
-            <Label Text="Description"></Label>
-            <Editor x:Name="TxtDesciption"  BackgroundColor="Wheat"></Editor>
+        <Label Grid.Row="2"  Text="Crated by"></Label>
+        <Entry Grid.Row="3"  x:Name="TxtCreatedBy" Keyboard="Text" BackgroundColor="Wheat"></Entry>
 
-            <Button Text="Save" Clicked="SaveNote_Clicked"></Button>
+        <Label Grid.Row="4"  Text="Description"></Label>
+        <Editor Grid.Row="5" x:Name="TxtDesciption"  BackgroundColor="Wheat"></Editor>
 
-        </VerticalStackLayout>
-    </ScrollView>
+        <Button Grid.Row="6"  Text="Save" Clicked="SaveNote_Clicked"></Button>
+
+        </Grid>
 
 </ContentPage>
